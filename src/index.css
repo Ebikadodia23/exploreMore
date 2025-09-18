@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,81 +6,80 @@
 
 @layer base {
   :root {
-    /* ExploreMore Brand Colors */
-    --primary: 203 73% 23%; /* Deep Ocean Blue #0B4D6A */
-    --primary-foreground: 0 0% 98%; /* Soft White */
-    --primary-glow: 203 54% 35%; /* Lighter Ocean Blue */
-    --primary-variant: 203 60% 30%; /* Mid Ocean Blue */
+    /* Smart White Theme Colors */
+    --primary: 220 100% 50%; /* Bright Blue #0080FF */
+    --primary-foreground: 0 0% 100%; /* Pure White */
+    --primary-glow: 220 100% 60%; /* Lighter Blue */
+    --primary-variant: 220 100% 40%; /* Darker Blue */
     
-    --secondary: 4 86% 70%; /* Warm Coral #FF6B6B */
-    --secondary-foreground: 0 0% 98%;
-    --secondary-glow: 4 86% 80%; /* Lighter Coral */
+    --secondary: 280 100% 60%; /* Purple #8000FF */
+    --secondary-foreground: 0 0% 100%;
+    --secondary-glow: 280 100% 70%; /* Lighter Purple */
     
-    --accent: 36 85% 68%; /* Golden Sand #F4A261 */
-    --accent-foreground: 0 0% 15%;
-    --accent-glow: 36 85% 78%; /* Lighter Golden */
+    --accent: 45 100% 50%; /* Golden Yellow #FFD700 */
+    --accent-foreground: 0 0% 0%;
+    --accent-glow: 45 100% 60%; /* Lighter Golden */
     
     --background: 0 0% 100%; /* Pure White */
-    --foreground: 0 0% 16%; /* Charcoal Gray #2A2A2A */
+    --foreground: 0 0% 0%; /* Pure Black for bold text */
     
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 16%;
+    --card-foreground: 0 0% 0%;
     
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 16%;
+    --popover-foreground: 0 0% 0%;
     
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 210 40% 98%;
+    --muted-foreground: 215 16% 30%;
     
     --border: 214 32% 91%;
     --input: 214 32% 91%;
-    --ring: 203 73% 23%;
+    --ring: 220 100% 50%;
     
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --radius: 0.5rem;
+    --radius: 12px;
 
-    /* Travel-specific gradients */
-    --gradient-ocean: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-sunset: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--accent)));
-    --gradient-wanderlust: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.9), hsl(var(--secondary) / 0.8));
+    /* Smart gradients */
+    --gradient-smart: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--primary)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.95), hsl(var(--secondary) / 0.9));
     
-    /* Shadows with brand colors */
-    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.3);
-    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.4);
-    --shadow-warm: 0 8px 25px -8px hsl(var(--secondary) / 0.25);
+    /* Enhanced shadows */
+    --shadow-smart: 0 10px 40px -10px hsl(var(--primary) / 0.3);
+    --shadow-bold: 0 20px 60px -15px hsl(var(--primary) / 0.4);
+    --shadow-card: 0 4px 20px -4px hsl(var(--primary) / 0.15);
     
     /* Smooth animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-smart: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
   .dark {
-    --background: 0 0% 8%;
+    --background: 0 0% 5%;
     --foreground: 0 0% 98%;
     
-    --card: 0 0% 10%;
+    --card: 0 0% 8%;
     --card-foreground: 0 0% 98%;
     
-    --popover: 0 0% 10%;
+    --popover: 0 0% 8%;
     --popover-foreground: 0 0% 98%;
     
-    --primary: 203 73% 35%; /* Lighter in dark mode */
-    --primary-foreground: 0 0% 8%;
+    --primary: 220 100% 60%;
+    --primary-foreground: 0 0% 0%;
     
-    --secondary: 4 86% 60%; /* Slightly muted in dark mode */
-    --secondary-foreground: 0 0% 8%;
+    --secondary: 280 100% 70%;
+    --secondary-foreground: 0 0% 0%;
     
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 217 33% 12%;
+    --muted-foreground: 215 20% 70%;
     
-    --accent: 36 85% 58%; /* Slightly muted in dark mode */
-    --accent-foreground: 0 0% 8%;
+    --accent: 45 100% 60%;
+    --accent-foreground: 0 0% 0%;
     
-    --border: 217 33% 17%;
-    --input: 217 33% 17%;
+    --border: 217 33% 15%;
+    --input: 217 33% 15%;
   }
 }
 
@@ -95,48 +94,69 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-poppins;
+    @apply font-poppins font-bold;
   }
   
   .font-display {
     font-family: 'Playfair Display', serif;
+    font-weight: 700;
+  }
+
+  .text-bold {
+    font-weight: 800;
+  }
+
+  .text-extra-bold {
+    font-weight: 900;
   }
 }
 
 @layer components {
-  .bg-gradient-ocean {
-    background: var(--gradient-ocean);
+  .bg-gradient-smart {
+    background: var(--gradient-smart);
   }
   
-  .bg-gradient-sunset {
-    background: var(--gradient-sunset);
-  }
-  
-  .bg-gradient-wanderlust {
-    background: var(--gradient-wanderlust);
+  .bg-gradient-accent {
+    background: var(--gradient-accent);
   }
   
   .bg-gradient-hero {
     background: var(--gradient-hero);
   }
   
-  .shadow-elegant {
-    box-shadow: var(--shadow-elegant);
+  .shadow-smart {
+    box-shadow: var(--shadow-smart);
   }
   
-  .shadow-glow {
-    box-shadow: var(--shadow-glow);
+  .shadow-bold {
+    box-shadow: var(--shadow-bold);
   }
   
-  .shadow-warm {
-    box-shadow: var(--shadow-warm);
+  .shadow-card {
+    box-shadow: var(--shadow-card);
   }
   
-  .transition-smooth {
-    transition: var(--transition-smooth);
+  .transition-smart {
+    transition: var(--transition-smart);
   }
   
   .transition-bounce {
     transition: var(--transition-bounce);
+  }
+
+  .country-card {
+    @apply bg-white rounded-2xl shadow-card hover:shadow-bold transition-smart cursor-pointer overflow-hidden border border-gray-100;
+  }
+
+  .country-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .smart-button {
+    @apply bg-gradient-smart text-white font-bold py-3 px-6 rounded-xl shadow-smart hover:shadow-bold transition-smart;
+  }
+
+  .smart-button:hover {
+    transform: translateY(-2px);
   }
 }
